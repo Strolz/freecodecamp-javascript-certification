@@ -4,16 +4,14 @@ Implement the Slice and Splice Algorithm
 
 In this lab, you will need to create an algorithm to merge two arrays.
 
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+Objective: 
 ----------------------------------------
 
-User Stories:
+Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-Create a frankenSplice function that accepts two arrays and an index.
-Copy each element of the first array into the second array, in order, beginning at the given index, and return the resulting array.
-The input arrays should remain the same after the function runs.
+User Stories
 ----------------------------------------
 
-URL Link to lab :https://www.freecodecamp.org/learn/javascript-v9/lab-slice-and-splice/implement-the-slice-and-splice-algorithm
-
-js file name: array-splicer.js
+1. Create a frankenSplice function that accepts two arrays and an index.
+2. Copy each element of the first array into the second array, in order, beginning at the given index, and return the resulting array.
+3. The input arrays should remain the same after the function runs.
