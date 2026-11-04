@@ -5,7 +5,7 @@ Build an app that is functionally similar to this example project. Try not to co
 
 In this lab, you will build a freeCodeCamp forum leaderboard that displays the latest topics, users, and replies from the freeCodeCamp forum. The HTML, CSS and part of the JS have been provided for you. Feel free to explore them.
 
-The API endpoint returns JSON in the following shape:
+The API endpoint returns JSON in the following shape
 ---------------------------------
 
     {
