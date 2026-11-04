@@ -1,4 +1,3 @@
-
 Build an Inventory Management Program
 ---------------------------------
 
