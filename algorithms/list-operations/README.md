@@ -8,7 +8,7 @@ Objective
 
 Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-User Stories:
+User Stories
 ---------------------------------
 
 You should have a contains function that accepts a linked list and an element. It should return true if the specified element exists in the linked list, and false otherwise.
