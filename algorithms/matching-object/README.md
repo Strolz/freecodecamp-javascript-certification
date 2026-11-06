@@ -1,19 +1,16 @@
-
 Implement a Matching Object Filter
 ---------------------------------
 
 In this lab, you will create a function that filters an array of objects and returns only those objects that match all key-value pairs in a given source object.
+
+Objective
 ---------------------------------
 
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
----------------------------------
-User Stories:
+Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-You should have a whatIsInAName function that accepts two arguments, an array of objects and a source object.
-The whatIsInAName function should return a new array containing only the objects from the collection that have all the key–value pairs present in the source object.
-If no objects match all the key–value pairs from the source, the function should return an empty array. For example:
+User Stories
 ---------------------------------
 
-URL Link to lab : https://www.freecodecamp.org/learn/javascript-v9/lab-matching-object-filter/implement-a-matching-object-filter
-
-js file name: matching-object.js
+1. You should have a whatIsInAName function that accepts two arguments, an array of objects and a source object.
+2. The whatIsInAName function should return a new array containing only the objects from the collection that have all the key–value pairs present in the source object.
+3. If no objects match all the key–value pairs from the source, the function should return an empty array. For example:
