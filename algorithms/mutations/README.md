@@ -1,19 +1,16 @@
-
 Implement the Mutations Algorithm
 ---------------------------------
 
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+Objective
 ---------------------------------
 
-User Stories:
+Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-Create a function named mutation that takes an array as its argument.
-mutation should return true if the string in the first element of the array contains all of the letters of the string in the second element of the array, and false otherwise. For example:
-mutation(["hello", "Hello"]), should return true because all of the letters in the second string are present in the first, ignoring case.
-mutation(["hello", "hey"]) should return false because the string hello does not contain a y.
-mutation(["Alien", "line"]), should return true because all of the letters in line are present in Alien.
+User Stories
 ---------------------------------
 
-URL Link to lab :https://www.freecodecamp.org/learn/javascript-v9/lab-mutations/implement-the-mutations-algorithm
-
-js file name: mutations.js
+1. Create a function named mutation that takes an array as its argument.
+2. mutation should return true if the string in the first element of the array contains all of the letters of the string in the second element of the array, and false otherwise. For example:
+    - mutation(["hello", "Hello"]), should return true because all of the letters in the second string are present in the first, ignoring case.
+    - mutation(["hello", "hey"]) should return false because the string hello does not contain a y.
+    - mutation(["Alien", "line"]), should return true because all of the letters in line are present in Alien.
