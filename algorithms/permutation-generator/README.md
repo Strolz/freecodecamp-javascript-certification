@@ -11,17 +11,17 @@ For the rest of the string, permutations continue in the same way. One letter is
 
 This continues until the prefix has all the letters, and the rest of the string is empty, that means one permutation has been created.
 
-Objective: 
+Objective
 ---------------------------------
 
 Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-User Stories:
+User Stories
 ---------------------------------
 
-You should create a function named permuteString.
-The permuteString function should take one parameter, a string, and then two parameters with a default value: a prefix value and an empty array for storing and returning the results. The prefix value should be a string used to accumulate characters to form a permutation. The function will be called with one single argument, like permuteString("cat").
-Inside the function, you should check if the length of the passed string is 0. If it is, push the current prefix to the results and return the results.
-Iterate over each character in the input string and for each iteration, remove the current character from the string and call the permuteString function recursively with updated arguments to build the remaining permutations.
-You should return the final results array.
-You should ensure that the permutations are unique by removing duplicates.
+1. You should create a function named permuteString.
+2. The permuteString function should take one parameter, a string, and then two parameters with a default value: a prefix value and an empty array for storing and returning the results. The prefix value should be a string used to accumulate characters to form a permutation. The function will be called with one single argument, like permuteString("cat").
+3. Inside the function, you should check if the length of the passed string is 0. If it is, push the current prefix to the results and return the results.
+4. Iterate over each character in the input string and for each iteration, remove the current character from the string and call the permuteString function recursively with updated arguments to build the remaining permutations.
+5. You should return the final results array.
+6. You should ensure that the permutations are unique by removing duplicates.
