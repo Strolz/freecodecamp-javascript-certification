@@ -1,12 +1,11 @@
 Build a Countup
 ---------------------------------
 
-Step 1
-======
 In this workshop, you will be creating a countup function, that creates an array with numbers from 1 to a given number using recursion.
 
+Step 1
+======
 Start by creating an empty function named countup that takes a single parameter.
----------------------------------
 
 Step 2
 ======
@@ -14,14 +13,14 @@ Add an if statement inside your countup function.
 
 Check if number is less than 1 and return an empty array.
 This will serve as the base case for your recursion.
----------------------------------
+
 
 Step 3
 ======
 Declare an empty array named countArray inside the countup function just above your if statement.
 
 This array will store the value of number at each function call.
----------------------------------
+
 
 Step 4
 ======
@@ -31,7 +30,7 @@ For all numbers greater than or equal to 1, create an else block and inside it, 
 Then use .push() to add number to countArray, and finally return countArray.
 
 This ensures the recursion eventually reaches the base case and terminates.
----------------------------------
+
 
 Step 5
 ======
@@ -40,4 +39,3 @@ Finally, test your countup function by calling it with the argument 5 inside a c
 The output should be [1, 2, 3, 4, 5].
 
 With that, the countup function workshop is complete
----------------------------------
