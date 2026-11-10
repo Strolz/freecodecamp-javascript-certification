@@ -2,46 +2,46 @@ Build a shopping cart
 ---------------------------------
 
 You will be building a shopping cart application. The HTML and CSS are already provided, but you will need to build the JavaScript to make the page interactive.
----------------------------------
+
 
 Step 1
 ======
 To start, you will need to get some of your elements from the DOM. Start by using document.getElementById() to get the #cart-container, #products-container, and #dessert-card-container elements. Store them in variables named cartContainer, productsContainer, and dessertCards, respectively.
 
 Since these will not change, remember to use const to declare them.
----------------------------------
+
 
 Step 2
 ======
 Now you need to get your two buttons. Continuing the pattern, get the #cart-btn and #clear-cart-btn elements. Store them in variables named cartBtn and clearCartBtn, respectively.
----------------------------------
+
 
 Step 3
 ======
 Next is to get your totals. Get the #total-items, #subtotal, #taxes, and #total elements. Store them in variables named totalNumberOfItems, cartSubTotal, cartTaxes, and cartTotal, respectively.
----------------------------------
+
 
 Step 4
 ======
 The last element to get is the #show-hide-cart element. Store it in a variable named showHideCartSpan.
 
 Then, use let to declare a variable named isCartShowing and set it to false.
----------------------------------
+
 
 Step 5
 ======
 A shopping cart does not serve much purpose without products. Declare a products variable and set it to an empty array. Using an array will allow you to store multiple products.
----------------------------------
+
 
 Step 6
 ======
 Before you start adding products, create a class named Dessert. Give it a constructor that takes four parameters in this order: id, name, price, and category. Inside the constructor, assign each parameter to a property of the same name on this.
----------------------------------
+
 
 Step 7
 ======
 Add a single value to your products array by calling new Dessert() with these arguments, in order: the number 1, the string "Vanilla Cupcakes (6 Pack)", the number 12.99, and the string "Cupcake".
----------------------------------
+
 
 Step 8
 ======
@@ -59,86 +59,86 @@ Butter Pecan Ice Cream	2.99	Ice Cream
 Rocky Road Ice Cream	2.99	Ice Cream
 Vanilla Macarons (5 Pack)	11.99	Macaron
 Lemon Cupcakes (4 Pack)	12.99	Cupcake
----------------------------------
+
 
 Step 9
 ======
 Now that you have your list of products, you can use JavaScript to insert them into the HTML. With this approach, if you decide to add more products, the HTML will automatically reflect that.
 
 Start by calling the .forEach method of your products array. Use arrow syntax to create an empty callback function.
----------------------------------
+
 
 Step 10
 =======
 For the first parameter of your callback function, destructure the name, id, price, and category properties from the Dessert instance passed in.
----------------------------------
+
 
 Step 11
 =======
 You need to display the available products in your HTML. Start by using the addition assignment operator to add an empty template literal string to the innerHTML property of the dessertCards variable
----------------------------------
+
 
 Step 12
 =======
 In your template literal, create a div element with a class of dessert-card. In that div, create an h2 element and give it the text of the name variable.
----------------------------------
+
 
 Step 13
 =======
 After your h2 element, create two p elements. Give the first a class of dessert-price, and set the text to a dollar sign "$" followed by the value of the price variable. Give the second a class of product-category, and the text "Category: " followed by the value of the category variable.
----------------------------------
+
 
 Step 14
 =======
 Finally, after your p elements, create a button element. Give it an id set to the value of the id variable, a class of btn add-to-cart-btn, and use "Add to cart" for the text.
----------------------------------
+
 
 Step 15
 =======
 Now that you have created a Dessert class, create a ShoppingCart class.
----------------------------------
+
 
 Step 16
 =======
 Add an empty constructor method to the ShoppingCart class.
----------------------------------
+
 
 Step 17
 =======
 In your constructor, use the this keyword to set the items property to an empty array. Also, set the total property to 0, and the taxRate property to 8.25.
----------------------------------
+
 
 Step 18
 =======
 The first parameter, id, is the id of the product the user has added to their cart. The second parameter, products, is an array of Dessert instances. By using a parameter instead of directly referencing your existing products array, this method will be more flexible if you wanted to add additional product lists in the future.
----------------------------------
+
 
 Step 19
 =======
 You need to find the product that the user is adding to the cart. Remember that arrays have a .find() method. In your addItem function, declare a product variable, and assign it the value of calling the .find() method on the products array.
 
 For the callback to .find(), pass a function that takes a single parameter item, and returns whether the id property of item is strictly equal to the id parameter passed to addItem.
----------------------------------
+
 
 Step 20
 =======
 Use const and destructuring to extract name and price variables from product.
----------------------------------
+
 
 Step 21
 =======
 Now you need to push the product into the cart's items array. Remember to use the this keyword.
----------------------------------
+
 
 Step 22
 =======
 Declare a totalCountPerProduct variable, and assign it an empty object.
----------------------------------
+
 
 Step 23
 =======
 Use the .forEach() method to loop through the items array. Pass an empty callback function that takes a single parameter dessert.
----------------------------------
+
 
 Step 24
 =======
@@ -147,17 +147,17 @@ You can use the || (logical OR) operator to provide a default value.
 Now, let's apply this concept to your totalCountPerProduct object in the forEach callback. Make sure that each dessert.id property is initialized properly.
 
 Initialize totalCountPerProduct[dessert.id] with a default value of 0 using the || operator.
----------------------------------
+
 
 Step 25
 =======
 In the forEach callback, wrap the right-hand assignment totalCountPerProduct[dessert.id] || 0 in parentheses () to ensure proper evaluation, then increment the value by one
----------------------------------
+
 
 Step 26
 =======
 Now you need to get prepared to update the display with the new product the user added. Declare a currentProductCount variable, and assign it the value of the totalCountPerProduct object's property matching the id of product.
----------------------------------
+
 
 Step 27
 =======
@@ -166,93 +166,93 @@ You haven't written the code to generate the HTML yet, but if a product has alre
 Use .getElementById() to get the matching element - you'll be setting the id value to product-count-for-id${product.id}, so use a template literal to query that value.
 
 Assign your query to a currentProductCountSpan variable.
----------------------------------
+
 
 Step 28
 =======
 The behavior of the addItem method needs to change if the product is already in the cart or not. Create a ternary that checks if the current product is already in the cart. Use undefined for both the truthy and falsy expressions to avoid a syntax error.
----------------------------------
+
 
 Step 29
 =======
 For your truthy expression, removing the undefined, you need to update the textContent of the currentProductCountSpan to be the currentProductCount followed by an x. Use a template literal to do so.
----------------------------------
+
 
 Step 30
 =======
 For your falsy expression, you'll need to add new HTML to your productsContainer. Start by removing the undefined, then use the addition assignment operator and template literal syntax to add a div with the class set to product and the id set to dessert${id} to the innerHTML property of the productsContainer.
----------------------------------
+
 
 Step 31
 =======
 Inside your div, add two p elements. Set the text of the second p element to be a dollar sign followed by the value of the price variable.
----------------------------------
+
 
 Step 32
 =======
 In your first p element, add a span element. Give the span a class of product-count and an id of product-count-for-id${id}. Then, after the span, give your p element the text of the name variable.
----------------------------------
+
 
 Step 33
 =======
 Declare a cart variable, and assign it a new ShoppingCart object. Note the use of the new keyword when instantiating the object.
----------------------------------
+
 
 Step 34
 =======
 You need to get all of the Add to cart buttons that you added to the DOM earlier. Declare an addToCartBtns variable, and assign it the value of calling the getElementsByClassName() method on the document object, passing in the string "add-to-cart-btn".
----------------------------------
+
 
 Step 35
 =======
 Use the spread operator on the addToCartBtns variable to convert it into an array. Then, use the forEach method to iterate through the array. Do not pass a callback function yet.
----------------------------------
+
 
 Step 36
 =======
 Add your callback function to the forEach method. It should take a btn parameter. Then, in the callback, add an event listener to the btn. The event listener should listen for a click event, and should take another callback with an event parameter. The second callback should be empty.
----------------------------------
+
 
 Step 37
 =======
 In your event listener callback, call the .addItem() method of your cart object, and pass in the event.target.id. Remember that the id here will be a string, so you need to convert it to a number.
 
 Pass your products array as the second argument.
----------------------------------
+
 
 Step 38
 =======
 Your cart currently isn't visible on the webpage. To make it visible, start by adding an event listener to the cartBtn variable, listening for the click event. The callback does not need any parameters.
----------------------------------
+
 
 Step 39
 =======
 Start by inverting the value of isCartShowing. Remember that you can use the logical not operator ! to invert the value of a boolean. Assign the inverted value to isCartShowing.
----------------------------------
+
 
 Step 40
 =======
 Now assign the textContent of the showHideCartSpan variable the result of a ternary expression which checks if isCartShowing is true. If it is, set the textContent to "Hide", otherwise set it to "Show".
----------------------------------
+
 
 Step 41
 =======
 Finally, update the display property of the style object of the cartContainer variable to another ternary which checks if isCartShowing is true. If it is, set the display property to "block", otherwise set it to "none".
 
 Now you should be able to see your cart and add items to it.
----------------------------------
+
 
 Step 42
 =======
 You need a way to access the total number of items in the cart. The best way to do this is to add another method to your ShoppingCart class, rather than accessing the items array directly.
 
 Add a getCounts method to the ShoppingCart class. It should return the number of items in the items array.
----------------------------------
+
 
 Step 43
 =======
 Now you can update the total number of items on the webpage. Assign the value of your cart object's .getCounts() method to the textContent of the totalNumberOfItems variable.
----------------------------------
+
 
 Step 44
 =======
@@ -261,68 +261,68 @@ You also need to update the total price of the cart when the user adds an item. 
 In that method, declare a subTotal variable and use the reduce method on the items array to calculate the sum of the price property of each item in the array. Use total and item as the parameters for your callback.
 
 Remember to set your initial value in the reduce method.
----------------------------------
+
 
 Step 45
 =======
 Part of the total cost will include the tax, so you need to calculate that as well. Create a calculateTaxes method in the ShoppingCart class. This method should take an amount parameter.      
----------------------------------
+
 
 Step 46
 =======
 Your calculateTaxes method should return the value of the taxRate (divided by 100, to convert it to a percent) multiplied by the amount parameter.
 
 For clarity, wrap the taxRate / 100 calculation in parentheses.
----------------------------------
+
 
 Step 47
 =======
 Because of the way computers store and work with numbers, calculations involving decimal numbers can result in some strange behavior. For example, 0.1 + 0.2 is not equal to 0.3. This is because computers store decimal numbers as binary fractions, and some binary fractions cannot be represented exactly as decimal fractions.
 
 We want to clean up the number result from your calculation. Wrap your calculation in parentheses (don't include the return statement!) and call the .toFixed() method on it. Pass the .toFixed() method the number 2 as an argument. This will round the number to two decimal places and return a string.
----------------------------------
+
 
 Step 48
 =======
 The issue with .toFixed() returning a string is that you want to be able to perform calculations with the tax rate. To fix this, you can pass the .toFixed() call (including the calculation) to the parseFloat() function. This will convert the fixed string back into a number, preserving the existing decimal places.
 
 Pass your .toFixed() call to parseFloat().
----------------------------------
+
 
 Step 49
 =======
 Declare a variable tax and assign it the value of calling your new .calculateTaxes() method, passing subTotal as the argument.
----------------------------------
+
 
 Step 50
 =======
 Update the total value to be the sum of the subTotal and tax values.
----------------------------------
+
 
 Step 51
 =======
 You're going to update the HTML in this method as well. Set the textContent of the cartSubTotal to be the value of subTotal to a fixed 2 decimal places. Use template literal syntax to add the dollar sign to the beginning of the value.
----------------------------------
+
 
 Step 52
 =======
 Following the same pattern as your cartSubTotal, update the cartTaxes to display the tax value, and your cartTotal to display the total property.
----------------------------------
+
 
 Step 53
 =======
 Finally, return the value of the total property. Remember your this keyword.
----------------------------------
+
 
 Step 54
 =======
 Now call your .calculateTotal() method inside your forEach loop.        
----------------------------------
+
 
 Step 55
 =======
 Your last feature is to allow users to clear their cart. Add a clearCart() method to your ShoppingCart class.
----------------------------------
+
 
 Step 56
 =======
@@ -331,31 +331,31 @@ The first thing you should do is check if the items array is empty. If it is, di
 Remember that 0 is a falsy value, so you can use the ! operator to check if the array is empty.
 
 After displaying the alert, return from the function to stop execution.
----------------------------------
+
 
 Step 57
 =======
 Browsers have a built-in confirm() function which displays a confirmation prompt to the user. confirm() accepts a string, which is the message displayed to the user. It returns true if the user confirms, and false if the user cancels.
 
 Declare a variable isCartCleared and assign it the value of calling confirm() with the string "Are you sure you want to clear all items from your shopping cart?".
----------------------------------
+
 
 Step 58
 =======
 You only want to clear the cart if the user confirms the prompt. Create an if statement that checks if the user confirmed the prompt.
 
 In the if statement, set the items property back to an empty array, then set the total property to 0.   
----------------------------------
+
 
 Step 59
 =======
 You also need to start clearing the HTML. Set the innerHTML property of the productsContainer back to an empty string.
----------------------------------
+
 
 Step 60
 =======
 Set the textContent of the totalNumberOfItems element to 0, and the textContent of the cartSubTotal, cartTaxes, and cartTotal elements to "$0". 
----------------------------------
+
 
 Step 61
 =======
@@ -366,4 +366,3 @@ However, doing so will not work, because the context of this will be the clearCa
 You can do this by passing cart.clearCart.bind(cart) as the callback.
 
 And with that, the shopping cart workshop is complete!
----------------------------------
