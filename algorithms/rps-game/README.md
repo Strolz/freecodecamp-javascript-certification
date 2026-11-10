@@ -4,7 +4,6 @@ Build an Emoji Reactor Rock, Paper, Scissors Game
 In this workshop, you will continue to practice working with the DOM and event handling by building a Rock, Paper, Scissors game.
 
 The HTML and CSS boilerplate for the game has been provided for you.
----------------------------------
 
 Step 1
 ======
@@ -16,7 +15,7 @@ Your task over the next few steps is to build the JavaScript functionality that 
 Take some time to look through the HTML provided and familiarize yourself with the structure of the game.
 
 When you're ready, click on the "Check your code" button to proceed to the next step and start the workshop.
----------------------------------
+
 
 Step 2
 ======
@@ -24,7 +23,7 @@ Step 2
 In the first part of the workshop, you will focus on building the functionality that generates a random choice for the computer.
 
 Start by creating a variable called options and assign it an array with the following strings: "Rock", "Paper", and "Scissors".
----------------------------------
+
 
 Step 3
 ======
@@ -34,7 +33,7 @@ The next step is to build out the functionality that will generate a random choi
 Create a function called getRandomComputerResult that returns a random choice from the options array.
 
 Hint: Don't forget that in the earlier JavaScript fundamentals section, you learned about using Math.random() and Math.floor().
----------------------------------
+
 
 Step 4
 ======
@@ -49,7 +48,7 @@ Here are the criteria for the player to win a round:
 If the player chooses "Rock" and the computer chooses "Scissors"
 If the player chooses "Scissors" and the computer chooses "Paper"
 If the player chooses "Paper" and the computer chooses "Rock"
----------------------------------
+
 
 Step 5
 ======
@@ -60,7 +59,7 @@ Create a variable called playerScore and initialize it with the value 0.
 Then, create a variable called computerScore and initialize it with the value 0.
 
 You will need to use let to declare these variables because their values will change throughout the game.
----------------------------------
+
 
 Step 6
 ======
@@ -73,7 +72,7 @@ If the computer and player choose the same option, return the message "It's a ti
 If the computer wins the round, update the computerScore by 1 and return the message "Computer wins! [computer's choice] beats [player's choice]".
 
 [computer's choice] should be replaced with computerResult while [player's choice] should be replaced with the userOption.
----------------------------------
+
 
 Step 7
 ======
@@ -84,7 +83,7 @@ Start by creating a variable called playerScoreSpanElement and assign it the val
 Then create a variable called computerScoreSpanElement and assign it the value of the element with the id computer-score.
 
 Finally, create a variable called roundResultsMsg and assign it the value of the element with the id results-msg.
----------------------------------
+
 
 Step 8
 ======
@@ -97,7 +96,7 @@ Inside your showResults function, the roundResultsMsg should be updated with the
 Then, the playerScoreSpanElement and computerScoreSpanElement should also be updated to show the updated scores of the player and computer.
 
 Remember, that the order matters here. You will need to first update the roundResultsMsg, then the playerScoreSpanElement, and finally the computerScoreSpanElement because the roundResultsMsg will be used to determine the scores.
----------------------------------
+
 
 Step 9
 ======
@@ -108,7 +107,7 @@ Start by creating a variable called rockBtn and assign it the value of the butto
 Then, create a variable called paperBtn and assign it the value of the button with the id of paper-btn.
 
 Finally, create a variable called scissorsBtn and assign it the value of the button with the id of scissors-btn.
----------------------------------
+
 
 Step 10
 =======
@@ -121,7 +120,7 @@ Then, create an event listener for the paperBtn button. When the paperBtn button
 Finally, create an event listener for the scissorsBtn button. When the scissorsBtn button is clicked, you should call the showResults function with the argument "Scissors".
 
 Now, you should be able to click on any of the buttons and see the results for each round.
----------------------------------
+
 
 Step 11
 =======
@@ -132,7 +131,7 @@ Start by creating a variable called winnerMsgElement that will store the element
 Then, create a variable called optionsContainer that will store the element with the class of options-container.
 
 Finally, create a variable called resetGameBtn that will store the element with the id of reset-game-btn.
----------------------------------
+
 
 Step 12
 =======
@@ -143,14 +142,14 @@ In your showResults function, if the player has reached three points, update the
 If there is a winner, show the resetGameBtn button by setting its display to block and hide the optionsContainer by setting its display to none.
 
 Now, try to play the game and see if the winner message is displayed when a player reaches three points.
----------------------------------
+
 
 Step 13
 =======
 If the player or computer has won the game, there should be an option to reset the game and play again.
 
 Add an event listener to the resetGameBtn button. Your event listener should take in a "click" event and a reference to the resetGame function.
----------------------------------
+
 
 Step 14
 =======
@@ -166,7 +165,3 @@ Clears the content for the winnerMsgElement and roundResultsMsg elements.
 Try testing out the game by playing a few rounds until one of the players reaches 3 points. Then, click the "Play again?" button to see if the game resets correctly.
 
 And with this final step, you have completed the Rock, Paper, Scissors game!
----------------------------------
-
-URL Link to lab : https://www.freecodecamp.org/learn/javascript-v9/workshop-rps-game/step-1
-
